@@ -28,8 +28,8 @@ The dataset used in this project is comprehensive and well-prepared, containing 
 The dataset's symptoms are labeled with categorical values, typically "Yes" or "No". To prepare the dataset for machine learning models, we used the OrdinalEncoder from sklearn.preprocessing to convert these categorical values into numerical values (1 for "Yes" and 0 for "No"). This transformation is crucial for enabling the regression models to process and learn from the dataset effectively.
 
 **Dataset Details**
-*Symptom Names:* The labels for the symptoms are used to identify each feature in the dataset.
-*Categorical Nature:* Most of the dataset features are categorical, necessitating the use of encoding techniques to convert them into a numerical format suitable for model training.
+*Symptom Names:* The labels for the symptoms are used to identify each feature in the dataset. \
+*Categorical Nature:* Most of the dataset features are categorical, necessitating the use of encoding techniques to convert them into a numerical format suitable for model training. 
 
 This preprocessing step ensures that the data is in the correct format for training the machine learning models, allowing for accurate predictions and analysis.
 
