@@ -16,7 +16,7 @@ The performance of each model is thoroughly analyzed to determine the most effec
 ## Data Preprocessing
 The dataset used in this project is comprehensive and well-prepared, containing a total of 521 observations with no missing values. Each observation represents a patient, and the dataset includes various symptoms and demographic information.
 
-### Dataset Overview
+*Dataset Overview* \
 **Number of Observations:** 521 \
 **Symptom Categories:** The dataset includes 16 symptoms, which are used as features to train the models. The symptoms are primarily categorical, with responses like "Yes" or "No". \
 **Age Group:** The dataset includes patients from various age groups, although specific age ranges are not explicitly detailed in the dataset. \
