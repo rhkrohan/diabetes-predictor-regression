@@ -1,4 +1,5 @@
 # Diabetes Prediction Analysis 
+## Introduction
 This project aims to predict the likelihood of diabetes in patients using various regression techniques. The dataset includes 16 symptoms as features and is sourced from a reliable dataset on Kaggle. The data preprocessing is performed using modules from the sklearn library.
 
 The dataset is split into training and testing sets with a ratio of 80:20 (train
