@@ -31,3 +31,46 @@ The dataset's symptoms are labeled with categorical values, typically "Yes" or "
 - **Categorical Nature:** Most of the dataset features are categorical, necessitating the use of encoding techniques to convert them into a numerical format suitable for model training.
 
 This preprocessing step ensures that the data is in the correct format for training the machine learning models, allowing for accurate predictions and analysis.
+
+## Models and Results
+
+In this project, we applied various regression models to predict the likelihood of diabetes in patients based on 16 symptoms. The models used include Multiple Linear Regression, Polynomial Regression, Support Vector Regression (SVR), Decision Tree Regression, and Random Forest Regression. Each model was evaluated for its performance using metrics like R² score and accuracy. We also visualized the actual vs. predicted values and the residuals to understand the model performance better. Additionally, feature importance was analyzed to identify the most influential symptoms for predicting diabetes.
+
+## Visualization
+
+The project includes various visualizations to help understand model performance and feature importance:
+
+### Scatter Plot of Actual vs. Predicted Values
+
+- Helps visualize how well the model's predictions match the actual values.
+- Useful for identifying any patterns or biases in the predictions.
+
+### Histogram of Residuals
+
+- Shows the distribution of prediction errors to identify any patterns or biases.
+- A normal distribution of residuals indicates a well-fitted model.
+
+### Decision Tree Structure
+
+- Visualizes the structure of the decision tree to understand the decision-making process.
+- Helps in understanding the model's logic and identifying key decision points.
+
+### Feature Importance
+
+- Displays the importance of each feature in the Random Forest model.
+- Useful for understanding which symptoms are most influential in predicting diabetes.
+
+## Cross-Validation
+
+The project implements cross-validation to ensure the models generalize well to unseen data. This technique splits the dataset into multiple folds and evaluates the model on each fold. The results provide insights into the model's consistency and performance across different subsets of the data.
+
+### Analysis
+
+- **Cross-Validation Scores**: Provide insight into the performance of the model on different subsets of the data.
+- **Mean R² Score**: Gives an overall estimate of the model's performance.
+- **Standard Deviation**: Indicates the consistency of the model's performance across different folds. Lower standard deviation suggests more consistent performance.
+
+## Feature Importance
+
+For the Random Forest model, feature importance is calculated to identify which symptoms contribute most to the prediction of diabetes. This helps in understanding the underlying factors influencing the diagnosis.
+
