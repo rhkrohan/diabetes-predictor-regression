@@ -90,26 +90,14 @@ Polynomial Regression, with a degree of 2, showed an improvement over Multiple L
 Multiple Linear Regression had the lowest performance, with an R² score of 0.705 and an accuracy of 93.269%. This is expected as linear models often struggle to capture non-linear relationships in the data.
 
 ### Detailed Analysis
+### Detailed Analysis
 
-#### Multiple Linear Regression
-
-- **Why it Worked**: Multiple Linear Regression provides a simple model that is easy to interpret and can perform well on datasets with linear relationships.
-- **Why it Didn't Work**: The dataset likely contains non-linear relationships between symptoms and the likelihood of diabetes, which a linear model cannot capture effectively. This is evident from its relatively lower R² score and accuracy.
-
-#### Polynomial Regression
-
-- **Why it Worked**: By introducing polynomial terms, the model can capture some non-linear relationships, leading to improved performance over Multiple Linear Regression.
-- **Why it Didn't Work**: Although it captures more complexity than a linear model, it might still be insufficient to fully model the intricate relationships in the dataset compared to more advanced models like SVR and Decision Tree Regression.
-
-#### Support Vector Regression (SVR)
-
-- **Why it Worked**: SVR, especially with an RBF kernel, is effective at capturing complex non-linear relationships in the data. It projects data into higher dimensions where a linear separation is possible, leading to superior performance.
-- **Why it Didn't Work**: Given its high performance, there are minimal drawbacks in this context, but SVR can be computationally intensive and sensitive to parameter settings.
-
-#### Decision Tree Regression
-
-- **Why it Worked**: Decision Tree Regression can model non-linear relationships and interactions between features effectively. It partitions the data into subsets based on feature values, capturing complex patterns.
-- **Why it Didn't Work**: Decision Trees can overfit the training data, but this is mitigated here as the model performed well on the test set. However, it may still be less robust compared to ensemble methods like Random Forest.
+| Model                   | Strengths                                                                                 | Limitations                                                                                   |
+|-------------------------|-------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| Multiple Linear Regression | Provides a simple model that is easy to interpret and can perform well on datasets with linear relationships. | The dataset likely contains non-linear relationships between symptoms and the likelihood of diabetes, which a linear model cannot capture effectively. This is evident from its relatively lower R² score and accuracy. |
+| Polynomial Regression   | By introducing polynomial terms, the model can capture some non-linear relationships, leading to improved performance over Multiple Linear Regression. | Although it captures more complexity than a linear model, it might still be insufficient to fully model the intricate relationships in the dataset compared to more advanced models like SVR and Decision Tree Regression. |
+| Support Vector Regression (SVR) | SVR, especially with an RBF kernel, is effective at capturing complex non-linear relationships in the data. It projects data into higher dimensions where a linear separation is possible, leading to superior performance. | Given its high performance, there are minimal drawbacks in this context, but SVR can be computationally intensive and sensitive to parameter settings. |
+| Decision Tree Regression | Decision Tree Regression can model non-linear relationships and interactions between features effectively. It partitions the data into subsets based on feature values, capturing complex patterns. | Decision Trees can overfit the training data, but this is mitigated here as the model performed well on the test set. However, it may still be less robust compared to ensemble methods like Random Forest. |
 
 ### Conclusion
 
