@@ -19,12 +19,12 @@ The performance of each model is thoroughly analyzed to determine the most effec
 The dataset used in this project is comprehensive and well-prepared, containing a total of 521 observations with no missing values. Each observation represents a patient, and the dataset includes various symptoms and demographic information.
 
 ### Dataset Overview
-- **Number of Observations:** 521
-- **Symptom Categories:** The dataset includes 16 symptoms, which are used as features to train the models. The symptoms are primarily categorical, with responses like "Yes" or "No".
-- **Age Group:** The dataset includes patients from various age groups, although specific age ranges are not explicitly detailed in the dataset.
+- *Number of Observations:* **521 observations**
+- *Symptom Categories:* The dataset includes **16 symptoms**, which are used as features to train the models. The **symptoms are primarily categorical**, with responses like "Yes" or "No".
+- *Age Group:* The dataset includes **patients from various age groups**, although specific age ranges are not explicitly detailed in the dataset.
 
 ### Data Encoding
-The dataset's symptoms are labeled with categorical values, typically "Yes" or "No". To prepare the dataset for machine learning models, we used the `OrdinalEncoder` from `sklearn.preprocessing` to convert these categorical values into numerical values (1 for "Yes" and 0 for "No"). This transformation is crucial for enabling the regression models to process and learn from the dataset effectively.
+The dataset's symptoms are labeled with **categorical values**, typically **"Yes" or "No"**. To prepare the dataset for machine learning models, we used the `OrdinalEncoder` from `sklearn.preprocessing` to convert these **categorical values into numerical values** (1 for "Yes" and 0 for "No"). This transformation is crucial for enabling the regression models to process and learn from the dataset effectively.
 
 ### Dataset Details
 - **Symptom Names:** The labels for the symptoms are used to identify each feature in the dataset.
@@ -36,35 +36,26 @@ This preprocessing step ensures that the data is in the correct format for train
 
 The project includes various visualizations to help understand model performance and feature importance:
 
-### Scatter Plot of Actual vs. Predicted Values
+### 1. Scatter Plot of Actual vs. Predicted Values
 
 - Helps visualize how well the model's predictions match the actual values.
 - Useful for identifying any patterns or biases in the predictions.
 
-### Histogram of Residuals
+### 2. Histogram of Residuals
 
 - Shows the distribution of prediction errors to identify any patterns or biases.
 - A normal distribution of residuals indicates a well-fitted model.
 
-### Decision Tree Structure
+### 3. Decision Tree Structure
 
 - Visualizes the structure of the decision tree to understand the decision-making process.
 - Helps in understanding the model's logic and identifying key decision points.
 
-### Feature Importance
+### 4. Feature Importance
 
 - Displays the importance of each feature in the Random Forest model.
 - Useful for understanding which symptoms are most influential in predicting diabetes.
 
-## Cross-Validation
-
-The project implements cross-validation to ensure the models generalize well to unseen data. This technique splits the dataset into multiple folds and evaluates the model on each fold. The results provide insights into the model's consistency and performance across different subsets of the data.
-
-### Analysis
-
-- **Cross-Validation Scores**: Provide insight into the performance of the model on different subsets of the data.
-- **Mean R² Score**: Gives an overall estimate of the model's performance.
-- **Standard Deviation**: Indicates the consistency of the model's performance across different folds. Lower standard deviation suggests more consistent performance.
 
 ## Results and Analysis
 
@@ -81,16 +72,13 @@ In this section, we present the performance metrics of each regression model app
 
 ### Analysis
 
-From the results, it is clear that the Support Vector Regression (SVR) model performed the best, achieving the highest R² score of 0.9461 and an accuracy of 100%. This indicates that SVR was able to capture the underlying patterns in the data most effectively among all the models tested.
+From the results, it is clear that the **Support Vector Regression (SVR) model performed the best**, achieving the highest **R² score of 0.9461** and an **accuracy** of **100%**. This indicates that SVR was able to capture the underlying patterns in the data most effectively among all the models tested.
 
-The Decision Tree Regression also performed well, with an R² score of 0.878 and an accuracy of 97.115%, showing its ability to model non-linear relationships in the dataset.
+The **Decision Tree Regression also performed well**, with an **R² score of 0.878** and an accuracy of **97.115%**, showing its ability to model non-linear relationships in the dataset.
 
-Polynomial Regression, with a degree of 2, showed an improvement over Multiple Linear Regression, indicating that adding polynomial terms helps in capturing non-linear relationships in the data. However, it did not perform as well as SVR or Decision Tree Regression.
+**Polynomial Regression**, with a **degree of 2**, showed an **improvement over Multiple Linear Regression**, indicating that adding polynomial terms helps in capturing non-linear relationships in the data. However, it did not perform as well as SVR or Decision Tree Regression.
 
-Multiple Linear Regression had the lowest performance, with an R² score of 0.705 and an accuracy of 93.269%. This is expected as linear models often struggle to capture non-linear relationships in the data.
-
-### Detailed Analysis
-### Detailed Analysis
+**Multiple Linear Regression had the lowest performance**, with an **R² score of 0.705** and an accuracy of **93.269%**. This is expected as linear models often struggle to capture non-linear relationships in the data.
 
 | Model                   | Strengths                                                                                 | Limitations                                                                                   |
 |-------------------------|-------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
@@ -103,7 +91,6 @@ Multiple Linear Regression had the lowest performance, with an R² score of 0.70
 
 Based on the analysis, Support Vector Regression (SVR) emerged as the best-performing model for predicting diabetes in this dataset, followed by Decision Tree Regression. Polynomial Regression and Multiple Linear Regression, while useful, did not capture the complexity of the data as effectively. Future work could explore ensemble methods like Random Forest or Gradient Boosting for potentially even better performance.
 
-[Link to the dataset](#) for further analysis and replication of results.
 
 
 
