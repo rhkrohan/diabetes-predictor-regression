@@ -32,10 +32,6 @@ The dataset's symptoms are labeled with categorical values, typically "Yes" or "
 
 This preprocessing step ensures that the data is in the correct format for training the machine learning models, allowing for accurate predictions and analysis.
 
-## Models and Results
-
-In this project, we applied various regression models to predict the likelihood of diabetes in patients based on 16 symptoms. The models used include Multiple Linear Regression, Polynomial Regression, Support Vector Regression (SVR), Decision Tree Regression, and Random Forest Regression. Each model was evaluated for its performance using metrics like R² score and accuracy. We also visualized the actual vs. predicted values and the residuals to understand the model performance better. Additionally, feature importance was analyzed to identify the most influential symptoms for predicting diabetes.
-
 ## Visualization
 
 The project includes various visualizations to help understand model performance and feature importance:
