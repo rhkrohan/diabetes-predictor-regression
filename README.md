@@ -66,7 +66,56 @@ The project implements cross-validation to ensure the models generalize well to 
 - **Mean R² Score**: Gives an overall estimate of the model's performance.
 - **Standard Deviation**: Indicates the consistency of the model's performance across different folds. Lower standard deviation suggests more consistent performance.
 
-## Feature Importance
+## Results and Analysis
 
-For the Random Forest model, feature importance is calculated to identify which symptoms contribute most to the prediction of diabetes. This helps in understanding the underlying factors influencing the diagnosis.
+In this section, we present the performance metrics of each regression model applied to predict the likelihood of diabetes in patients based on 16 symptoms. The models were evaluated using the R² score and the percentage accuracy of the predictions on the test set.
+
+### Model Performance
+
+| Model                       | R² Score | Accuracy (%) |
+|-----------------------------|----------|--------------|
+| Multiple Linear Regression  | 0.705    | 93.269       |
+| Polynomial Regression       | 0.808    | 93.269       |
+| Support Vector Regression   | 0.9461   | 100          |
+| Decision Tree Regression    | 0.878    | 97.115       |
+
+### Analysis
+
+From the results, it is clear that the Support Vector Regression (SVR) model performed the best, achieving the highest R² score of 0.9461 and an accuracy of 100%. This indicates that SVR was able to capture the underlying patterns in the data most effectively among all the models tested.
+
+The Decision Tree Regression also performed well, with an R² score of 0.878 and an accuracy of 97.115%, showing its ability to model non-linear relationships in the dataset.
+
+Polynomial Regression, with a degree of 2, showed an improvement over Multiple Linear Regression, indicating that adding polynomial terms helps in capturing non-linear relationships in the data. However, it did not perform as well as SVR or Decision Tree Regression.
+
+Multiple Linear Regression had the lowest performance, with an R² score of 0.705 and an accuracy of 93.269%. This is expected as linear models often struggle to capture non-linear relationships in the data.
+
+### Detailed Analysis
+
+#### Multiple Linear Regression
+
+- **Why it Worked**: Multiple Linear Regression provides a simple model that is easy to interpret and can perform well on datasets with linear relationships.
+- **Why it Didn't Work**: The dataset likely contains non-linear relationships between symptoms and the likelihood of diabetes, which a linear model cannot capture effectively. This is evident from its relatively lower R² score and accuracy.
+
+#### Polynomial Regression
+
+- **Why it Worked**: By introducing polynomial terms, the model can capture some non-linear relationships, leading to improved performance over Multiple Linear Regression.
+- **Why it Didn't Work**: Although it captures more complexity than a linear model, it might still be insufficient to fully model the intricate relationships in the dataset compared to more advanced models like SVR and Decision Tree Regression.
+
+#### Support Vector Regression (SVR)
+
+- **Why it Worked**: SVR, especially with an RBF kernel, is effective at capturing complex non-linear relationships in the data. It projects data into higher dimensions where a linear separation is possible, leading to superior performance.
+- **Why it Didn't Work**: Given its high performance, there are minimal drawbacks in this context, but SVR can be computationally intensive and sensitive to parameter settings.
+
+#### Decision Tree Regression
+
+- **Why it Worked**: Decision Tree Regression can model non-linear relationships and interactions between features effectively. It partitions the data into subsets based on feature values, capturing complex patterns.
+- **Why it Didn't Work**: Decision Trees can overfit the training data, but this is mitigated here as the model performed well on the test set. However, it may still be less robust compared to ensemble methods like Random Forest.
+
+### Conclusion
+
+Based on the analysis, Support Vector Regression (SVR) emerged as the best-performing model for predicting diabetes in this dataset, followed by Decision Tree Regression. Polynomial Regression and Multiple Linear Regression, while useful, did not capture the complexity of the data as effectively. Future work could explore ensemble methods like Random Forest or Gradient Boosting for potentially even better performance.
+
+[Link to the dataset](#) for further analysis and replication of results.
+
+
 
