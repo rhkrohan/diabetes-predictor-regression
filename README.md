@@ -36,25 +36,13 @@ This preprocessing step ensures that the data is in the correct format for train
 
 The project includes various visualizations to help understand model performance and feature importance:
 
-### 1. Scatter Plot of Actual vs. Predicted Values
+| Visualization Technique                   | Description                                                                                                                                               | Usefulness                                                                                                 |
+|-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| Scatter Plot of Actual vs. Predicted Values | Helps visualize how well the model's predictions match the actual values.                                                                                   | Useful for identifying any patterns or biases in the predictions.                                          |
+| Histogram of Residuals                    | Shows the distribution of prediction errors to identify any patterns or biases.                                                                             | A normal distribution of residuals indicates a well-fitted model.                                          |
+| Decision Tree Structure                   | Visualizes the structure of the decision tree to understand the decision-making process.                                                                    | Helps in understanding the model's logic and identifying key decision points.                              |
+| Feature Importance                        | Displays the importance of each feature in the Random Forest model.                                                                                         | Useful for understanding which symptoms are most influential in predicting diabetes.                       |
 
-- Helps visualize how well the model's predictions match the actual values.
-- Useful for identifying any patterns or biases in the predictions.
-
-### 2. Histogram of Residuals
-
-- Shows the distribution of prediction errors to identify any patterns or biases.
-- A normal distribution of residuals indicates a well-fitted model.
-
-### 3. Decision Tree Structure
-
-- Visualizes the structure of the decision tree to understand the decision-making process.
-- Helps in understanding the model's logic and identifying key decision points.
-
-### 4. Feature Importance
-
-- Displays the importance of each feature in the Random Forest model.
-- Useful for understanding which symptoms are most influential in predicting diabetes.
 
 
 ## Results and Analysis
